@@ -23,6 +23,7 @@ public class FoldToNextAvaPane extends VBox{
 		super();
 		ArrayList<String> allAvaPosList = new ArrayList<String>();
 		allAvaPosList = currAction.getAvaPos().getAllNextPos(currAction.getPosition());
+		allAvaPosList.remove(allAvaPosList.size() - 1);
 		allAvaPosList.remove(0);
 		allAvaPosList.remove(0);
 		for (String pos: allAvaPosList) {
