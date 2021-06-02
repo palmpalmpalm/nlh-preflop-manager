@@ -137,8 +137,7 @@ public class CombosPane extends StackPane{
 			for (int j = 0; j < Setting.getCard().length(); j++) {
 				
 				FlowPane comboCell = new FlowPane();
-				comboCell.setMaxSize(Constant.GRID_SIZE, Constant.GRID_SIZE);
-
+				comboCell.setMinSize(Constant.GRID_SIZE, Constant.GRID_SIZE);
 
 				double actionFreq = 0;
 				int actionColor = 0;
@@ -149,17 +148,18 @@ public class CombosPane extends StackPane{
 							RaiseNode castAction = (RaiseNode) action;
 							double currActionFreq = castAction.getCurrentCombos().getCurrentCombosByPos(i, j);
 							if (randomNumber > actionFreq && randomNumber <= actionFreq + currActionFreq) {
-								System.out.println(String.valueOf(i) + " " + String.valueOf(j));
+								comboCell.getChildren()
+										.add(new ActionCell(100, Constant.RAISE_COLOR_PALETTE[actionColor]));
 							}
-							actionFreq += currActionFreq;							
-							actionColor++;				
+							actionFreq += currActionFreq;
+							actionColor++;
 						} else if (action instanceof CheckCallNode) {
-							CheckCallNode castAction = (CheckCallNode) action;	
+							CheckCallNode castAction = (CheckCallNode) action;
 							double currActionFreq = castAction.getCurrentCombos().getCurrentCombosByPos(i, j);
 							if (randomNumber > actionFreq && randomNumber <= actionFreq + currActionFreq) {
 								comboCell.getChildren().add(new ActionCell(100, Constant.CALL_COLOR));
 							}
-							actionFreq += currActionFreq;						
+							actionFreq += currActionFreq;
 						}
 					}else {
 						if (action instanceof RaiseNode) {

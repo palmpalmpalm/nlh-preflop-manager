@@ -17,7 +17,7 @@ public class ActionCell extends Rectangle{
 	 */
 	public ActionCell(double actionFrequency, Color color) {
 		super();
-		double af = actionFrequency/100 * (Constant.GRID_SIZE);
+		double af = Math.floor(actionFrequency/100 * (Constant.GRID_SIZE));
 		af = Math.floor(af);
 		
 		//GUI Styling
