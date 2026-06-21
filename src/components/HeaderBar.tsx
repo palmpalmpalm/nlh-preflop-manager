@@ -45,7 +45,9 @@ export function HeaderBar({ view }: HeaderBarProps) {
     <header className="header-bar" aria-busy={view.isBusy}>
       {view.isBusy && <div className="loading-line" />}
       <button className="brand-button" onClick={() => preflopEngine.navigateRoot()} title="Go to root">
-        <span className="brand-mark">PM</span>
+        <span className="brand-mark" aria-hidden="true">
+          <img src="/icon-192.png" alt="" />
+        </span>
         <span>
           <strong>NLH Preflop Manager</strong>
           <small>{view.isBusy ? view.busyLabel : view.status}</small>

@@ -145,16 +145,19 @@ button {
 
 .brand-mark {
   display: grid;
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 8px;
-  color: var(--text);
-  background: var(--surface);
-  font-size: 12px;
-  font-weight: 900;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-button strong {
@@ -765,9 +768,9 @@ h2 {
   }
 
   .brand-mark {
-    flex-basis: 34px;
-    width: 34px;
-    height: 34px;
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
   }
 
   .brand-button {
