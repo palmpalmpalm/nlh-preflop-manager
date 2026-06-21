@@ -1,0 +1,38 @@
+{
+  "name": "NLH Preflop Manager",
+  "short_name": "Preflop",
+  "description": "A fast local-first web app for No-Limit Hold'em preflop game trees, weighted combos, and range study.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f6f7f8",
+  "theme_color": "#f6f7f8",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["games", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "NLH Preflop Manager range building workspace"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "nlh-preflop-manager-web",
+  "private": true,
+  "version": "0.1.0",
+  "homepage": "https://preflop.donkjam.com",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "deploy:cloudflare": "npm run build && npx --yes wrangler@3 pages deploy dist --project-name donkjam-preflop --branch main --commit-dirty=true",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.61.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
