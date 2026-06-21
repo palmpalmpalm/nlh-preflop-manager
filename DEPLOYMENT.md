@@ -73,7 +73,7 @@ Before a production deploy, keep these files aligned with the live domain:
 - `public/sitemap.xml`
 - `public/og-image.png`
 
-Use the social image size `1200x630` for reliable Open Graph and Twitter card previews.
+Use the social image size `1200x630` for reliable Open Graph and Twitter card previews. Point metadata at a versioned filename such as `og-image-v2.png` when artwork changes, because social platforms and CDNs can cache preview images aggressively.
 
 ## Routing
 

@@ -5,6 +5,7 @@
   "homepage": "https://preflop.donkjam.com",
   "type": "module",
   "scripts": {
+    "brand:render": "node scripts/render-brand-assets.mjs",
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",
     "deploy:cloudflare": "npm run build && npx --yes wrangler@3 pages deploy dist --project-name donkjam-preflop --branch main --commit-dirty=true",

@@ -66,8 +66,22 @@ Production metadata lives in `index.html`, `public/manifest.webmanifest`, `publi
 The primary social preview image is:
 
 ```text
-public/og-image.png
+public/og-image-v2.png
 ```
+
+Brand icons are generated from:
+
+```text
+assets/brand/icon-range-grid.svg
+```
+
+Regenerate favicons, app icons, the mask icon, and the social preview image with:
+
+```bash
+npm run brand:render
+```
+
+The generator also writes `public/og-image.png` as the latest unversioned copy. Metadata should point at a versioned `og-image-v*.png` file when visual changes need to bypass social-card caches.
 
 If the domain changes, update the canonical URL, Open Graph URL/image, Twitter image, JSON-LD URL, robots sitemap URL, and sitemap location together.
 

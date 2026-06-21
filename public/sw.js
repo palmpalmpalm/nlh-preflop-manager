@@ -1,8 +1,9 @@
-const CACHE_NAME = "nlh-preflop-manager-v4";
+const CACHE_NAME = "nlh-preflop-manager-v6";
 const APP_SHELL = [
   "/",
   "/manifest.webmanifest",
   "/og-image.png",
+  "/og-image-v2.png",
   "/icon-192.png",
   "/icon-512.png",
   "/apple-touch-icon.png",
